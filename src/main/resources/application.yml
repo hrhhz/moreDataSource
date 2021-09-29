@@ -1,0 +1,24 @@
+spring:
+  # datasource 数据源配置内容
+  datasource:
+    # 1
+    one:
+      url: jdbc:mysql://127.0.0.1:3306/blog?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 123456
+      # HikariCP 自定义配置，对应 HikariConfig 配置属性类
+      hikari:
+        minimum-idle: 20 # 池中维护的最小空闲连接数，默认为 10 个。
+        maximum-pool-size: 20 # 池中最大连接数，包括闲置和使用中的连接，默认为 10 个。
+    # 用户数据源配置
+    two:
+      url: jdbc:mysql://127.0.0.1:3306/hkzf?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 123456
+      # HikariCP 自定义配置，对应 HikariConfig 配置属性类
+      hikari:
+        minimum-idle: 15 # 池中维护的最小空闲连接数，默认为 10 个。
+        maximum-pool-size: 15 # 池中最大连接数，包括闲置和使用中的连接，默认为 10 个。
+
